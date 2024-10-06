@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/color_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="@drawable/transparent_ripple_background"
+    android:gravity="center"
+    app:cardCornerRadius="50dp"
+    app:strokeColor="@color/selected_tab_color"
+    app:strokeWidth="3dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/color_palette"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/remove_background_icon" />
+</com.google.android.material.card.MaterialCardView>

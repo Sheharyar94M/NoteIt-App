@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@drawable/bottom_sheet_background">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/item1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/transparent_ripple_background"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/item2">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/item_icon1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/camera_icon" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/take_photo"
+            android:textSize="16sp"
+            android:textColor="@color/hint_text_color"
+            android:lineSpacingExtra="8sp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginStart="20dp"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/item2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/transparent_ripple_background"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item1"
+        app:layout_constraintBottom_toTopOf="@+id/item3">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/item_icon2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/add_photo_icon" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_image"
+            android:textSize="16sp"
+            android:textColor="@color/hint_text_color"
+            android:lineSpacingExtra="8sp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginStart="20dp"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/item3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/transparent_ripple_background"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item2"
+        app:layout_constraintBottom_toTopOf="@+id/item4">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/item_icon3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/draw_icon_" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_text3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/drawing"
+            android:textSize="16sp"
+            android:textColor="@color/hint_text_color"
+            android:lineSpacingExtra="8sp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginStart="20dp"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/item4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/transparent_ripple_background"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item3"
+        app:layout_constraintBottom_toTopOf="@+id/item5">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/item_icon4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/mike_button_" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_text4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recording"
+            android:textSize="16sp"
+            android:textColor="@color/hint_text_color"
+            android:lineSpacingExtra="8sp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginStart="20dp"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/item5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/transparent_ripple_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item4">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/item_icon5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/check_box" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_text5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/check_boxes"
+            android:textColor="@color/hint_text_color"
+            android:textSize="16sp"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

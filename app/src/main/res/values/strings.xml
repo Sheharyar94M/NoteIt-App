@@ -1,0 +1,291 @@
+<resources>
+    <string name="app_name">Quick Notepad</string>
+    <string name="app_name_"><b>Quick</b> Notepad</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="notes_text">Note</string>
+    <string name="drafts_text">Drafts</string>
+    <string name="note_location_labels">Labels</string>
+    <string name="add_label_text">Create new label</string>
+    <string name="archive_text">Archives</string>
+    <string name="trash_text">Trash</string>
+    <string name="rating_text">Rate us</string>
+    <string name="search_notes_hint">Search Notes</string>
+    <string name="reminder_text">Reminder</string>
+
+    <string name="toast_notification_permission_denied">Notification permission denied, reminders
+        won\'t work! Tap any reminder to setup</string>
+    <string name="toast_alarm_permission_denied">Alarm permission denied, reminders won\'t work!
+        Tap any reminder to setup</string>
+
+    <string name="reminder_notif_channel_title">Reminders</string>
+    <string name="reminder_notif_channel_descr">Reminders set on notes</string>
+    <string name="reminder_empty_placeholder"> </string>
+    <string name="reminder_restricted_battery">Reminder alarms may not work correctly because the
+    app has restricted battery usage. This can be changed in the app settings.</string>
+
+    <string name="pref_group_appearance">Appearance</string>
+    <string name="pref_theme">App theme</string>
+    <string name="pref_theme_light">Light</string>
+    <string name="pref_theme_dark">Dark</string>
+    <string name="pref_theme_system">Follow system</string>
+    <string name="pref_dynamic_colors">Use dynamic colors</string>
+    <string name="pref_strikethrough_checked">Strikethrough checked list items</string>
+    <string name="pref_preview_labels">Maximum number of labels in preview</string>
+
+    <string name="pref_shown_date">Date shown for notes</string>
+    <string name="pref_shown_date_added">Creation date</string>
+    <string name="pref_shown_date_modified">Last modified date</string>
+    <string name="pref_shown_date_none">No date shown</string>
+
+    <string name="pref_deleted_notes_timeout_title">Trash auto-delete delay</string>
+    <string name="pref_deleted_notes_timeout_day">24 hours</string>
+    <string name="pref_deleted_notes_timeout_week">7 days</string>
+    <string name="pref_deleted_notes_timeout_month">30 days</string>
+    <string name="pref_deleted_notes_timeout_year">1 year</string>
+
+    <string name="pref_preview_lines">Maximum lines in previews</string>
+    <string name="pref_preview_lines_summary">Configure how many lines and items are shown on notes,
+        for each layout mode and note type</string>
+    <string name="pref_preview_lines_grid_layout">Grid layout</string>
+    <string name="pref_preview_lines_list_layout">List layout</string>
+    <string name="pref_preview_lines_text">Lines in text note preview</string>
+    <string name="pref_preview_lines_list">Items in list note preview</string>
+
+    <string name="pref_group_behavior">Behavior</string>
+    <string name="pref_behavior_swipe_action_left">Swipe left action</string>
+    <string name="pref_behavior_swipe_action_right">Swipe right action</string>
+    <string name="pref_behavior_move_checked">Move checked items to the bottom</string>
+    <string name="pref_deleted_notes_timeout">Deleted notes timeout</string>
+
+    <string name="pref_group_data">Data</string>
+    <string name="pref_data_export">Export data</string>
+    <string name="pref_data_export_summary">Export notes data as JSON</string>
+    <string name="pref_data_encrypted_export">Encrypted export</string>
+    <string name="pref_data_encrypted_export_summary">Encrypts the exported notes. Access is not possible without
+        the correct password.</string>
+    <string name="pref_data_auto_export">Automatic data export</string>
+    <string name="pref_data_auto_export_summary">Automatically export the app\'s data to a file, once a day.</string>
+    <string name="pref_data_auto_export_date">(Last exported on %s)</string>
+    <string name="pref_data_import">Import data</string>
+    <string name="pref_data_import_summary">Import previously exported JSON data, merging with existing data.</string>
+    <string name="pref_data_clear">Clear all data</string>
+    <string name="pref_data_clear_confirm_message">All notes data will be cleared permanently!
+        This cannot be undone.</string>
+    <string name="pref_data_clear_success_message">All data was cleared successfully.</string>
+
+    <string name="pref_group_about">About</string>
+    <string name="pref_about_view_source">View on Github</string>
+    <string name="pref_about_view_licenses">Open source licenses</string>
+    <string name="pref_about_version">Version</string>
+
+    <string name="pref_restart_dialog_title">Restart required!</string>
+    <string name="pref_restart_dialog_description">A restart is required for these changes to take effect.
+        Do you want to restart the app now?</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_etiam_vulputate_id_libero_nec_suscipit_quisque_eu_vulputate_nibh_donec_vel_nisl_elementum_auctor_est_nec_malesuada_ex_duis_nec_nibh_neque_suspendisse_vehicula_dui_nec_sollicitudin_convallis_sem_nulla_hendrerit_magna">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Etiam vulputate id libero nec suscipit. Quisque eu vulputate nibh.Donec vel nisl elementum, auctor est nec, malesuada ex. Duis nec nibh neque.Suspendisse vehicula, dui nec sollicitudin convallis, sem nulla hendrerit magna.</string>
+    <string name="folder_name">Folder name</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="add_image">Add Image</string>
+    <string name="drawing">Drawing</string>
+    <string name="recording">Recording</string>
+    <string name="check_boxes">Check Boxes</string>
+    <string name="color">Color</string>
+    <string name="gradient">Gradient</string>
+    <string name="wallpaper">Wallpaper</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="rash_reminder">Your trash is increasing clear the trash</string>
+    <string name="action_mark_as_done">Mark as done</string>
+
+    <!-- Relative date time format -->
+    <string name="date_rel_today">Today, %s</string>
+    <string name="date_rel_yesterday">Yesterday, %s</string>
+    <string name="date_rel_tomorrow">Tomorrow, %s</string>
+    <plurals name="date_rel_days_past">
+        <!-- used with quantity >= 2, format values: number of days, time -->
+        <item quantity="other">%d days ago, %s</item>
+    </plurals>
+    <plurals name="date_rel_days_future">
+        <!-- used with quantity >= 2, format values: number of days, time -->
+        <item quantity="other">In %d days, %s</item>
+    </plurals>
+    <string name="date_rel_absolute">%1$s, %2$s</string>
+
+    <plurals name="note_list_item_info">
+        <item quantity="one">+ %d other list item</item>
+        <item quantity="other">+ %d other list items</item>
+    </plurals>
+
+    <plurals name="note_list_item_info_checked">
+        <item quantity="one">+ %d checked item</item>
+        <item quantity="other">+ %d checked items</item>
+    </plurals>
+
+    <string name="reminder_notif_permission">To be able to send reminder notifications, the app needs a permission.
+    Click OK to show the permission request. You will be able to set a reminder afterwards.</string>
+    <string name="action_ok">OK</string>
+
+    <string name="action_postpone">Postpone</string>
+    <string name="reminder_invalid_time">This time has already passed.</string>
+
+    <string name="action_reminder_add">Add Reminder</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_reminder_edit">Edit reminder</string>
+    <string name="reminder_alarm_permission">To be able to send reminder notifications starting from
+        Android 14, the app needs another permission. Click OK to show the permission request.
+        You will be able to set reminder afterwards.</string>
+    <string name="action_undo">Undo</string>
+
+    <string name="label_notes_empty_placeholder"> </string>
+    <string name="note_pinned">Pinned</string>
+    <string name="note_not_pinned">Others</string>
+
+    <string name="note_placeholder_active"> </string>
+    <string name="note_placeholder_archived">No archived notes</string>
+    <string name="note_placeholder_deleted"> </string>
+    <string name="reminder_today">Today</string>
+    <string name="reminder_overdue">Overdue</string>
+    <string name="reminder_date">Date</string>
+    <string name="reminder_time">Time</string>
+    <string name="reminder_upcoming">Upcoming</string>
+    <string name="note_location_archived">Archived</string>
+    <string name="reminder_notif_permission_denied">The notification permission has been denied.
+    Reminder alarms will not work until enabled.</string>
+    <string name="reminder_alarm_permission_denied">The reminder permission has been denied.
+    Reminder alarms will not work until enabled.</string>
+    <plurals name="trash_reminder_message">
+        <item quantity="one">Notes in recycle bin are automatically deleted after %d day.</item>
+        <item quantity="other">Notes in recycle bin are automatically deleted after %d days.</item>
+    </plurals>
+    <string name="auto_export_fail">Failed to export data automatically. Make sure the export location
+        still exists and is accessible, then reconfigure automatic export.</string>
+    <string name="create_new_folder">Create New Folder</string>
+    <string name="new_folder">New Folder</string>
+    <string name="hold_to_record">Hold to Record</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_etiam_vulputate_id_libero_nec_suscipit_quisque_eu_vulputate_nibh">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vulputate id libero nec suscipit. Quisque eu vulputate nibh.</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="do_you_want_to_save_changes">Do you want to save changes?</string>
+    <string name="user_name">User Name</string>
+    <string name="xyz_xyz_com">xyz@xyz.com</string>
+    <string name="add_another_account">Add another account</string>
+    <string name="manage_your_account">Manage your account</string>
+    <string name="create_password">Create Password</string>
+    <string name="current_password">Current Password</string>
+    <string name="xcv_hjt7u">xcv@hjt7u</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="change_password">Change Password</string>
+    <string name="unlock">Unlock</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="forget_password">Forgot Password?</string>
+    <string name="edited_12_00_pm">Edited 12:00 PM</string>
+    <string name="archive_text_">Archive</string>
+    <string name="copy">Make a copy</string>
+    <string name="send">Send</string>
+    <string name="move">Move to Folder</string>
+    <string name="try_to_choose_different_name">Try to choose different name</string>
+    <string name="search_drafts">Search Drafts</string>
+    <string name="clear_canvas">Clear Canvas</string>
+    <string name="listening">Listening...</string>
+    <string name="api_key_for_stt_transcribtion">20924386371747e79e52df70aac2ed2d</string>
+    <string name="select_font">Select font</string>
+    <string name="premium">Premium</string>
+    <string name="hide_checkboxes">Hide Checkboxes</string>
+    <string name="check_items">Uncheck all Items</string>
+    <string name="delete_items">Delete Done Items</string>
+    <string name="to_do_list">To Do List</string>
+    <string name="done_list">Done List</string>
+    <string name="edit_hint_note_item">Add Item</string>
+    <string name="title">Title</string>
+    <string name="content">Content</string>
+    <string name="edit_convert_keep_checked">Remove checked Items?</string>
+    <string name="action_keep">Keep</string>
+    <string name="action_open">Open</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="new_label">new label</string>
+    <string name="create_new_label">Create New Label</string>
+    <string name="privacy_policy"><u>Privacy Policy</u></string>
+    <string name="terms_conditions"><u>Terms of Service</u></string>
+    <string name="action_delete_selection">Delete Selection</string>
+    <string name="label_delete_message">Selected labels will be deleted, but the notes associated\n    to them will be kept.</string>
+    <string name="want_to_appreciate_us">Want to appreciate us?</string>
+    <string name="we_are_sure_that_you_like_our_app_and_want_to_appreciate_us_rate_us_5_stars">We are sure that you like our app, and want to appreciate us! Rate us 5 stars!</string>
+    <string name="no_appreciation">No Appreciation</string>
+    <string name="premium_user">Premium User</string>
+    <string name="scan_unlimited_images_to_extract_text">Scan unlimited images to extract text</string>
+    <string name="lock_unlimited_notes_and_folder">Lock unlimited notes and folder</string>
+    <string name="_100_ads_free">100% Ads free</string>
+    <string name="unlock_all_features">Unlock All Features</string>
+    <string name="upgrade_now">Upgrade Now</string>
+    <string name="no_thanks">No Thanks</string>
+    <string name="heading_text">Quarterly</string>
+    <string name="quarterly">Quarterly</string>
+    <string name="_14_000_pkr">14,000 pkr</string>
+    <string name="rs2000_month">Rs2000/Month</string>
+    <plurals name="edit_message_move_restore">
+        <item quantity="one">Note restored.</item>
+        <item quantity="other">Notes restored.</item>
+    </plurals>
+    <plurals name="edit_message_move_unarchive">
+        <item quantity="one">Note unarchived.</item>
+        <item quantity="other">Notes unarchived.</item>
+    </plurals>
+    <plurals name="edit_move_archive_message">
+        <item quantity="one">Note archived.</item>
+        <item quantity="other">Notes archived.</item>
+    </plurals>
+    <plurals name="edit_message_move_delete">
+        <item quantity="one">Note moved to recycle bin.</item>
+        <item quantity="other">Notes moved to recycle bin.</item>
+    </plurals>
+
+    <plurals name="edit_checked_items">
+        <item quantity="one">%d checked item</item>
+        <item quantity="other">%d checked items</item>
+    </plurals>
+
+    <string name="edit_copy_suffix">Copy</string>
+    <string name="edit_copy_untitled_name">Untitled</string>
+    <string name="signin">Sign In</string>
+    <string name="password">Password</string>
+    <string name="don_t_have_an_account_sign_up">Don’t have an account? Sign Up</string>
+    <string name="signup">Sign Up</string>
+    <string name="already_have_an_account_sign_in">Already have an account? Sign In</string>
+    <string name="first_name">First Name</string>
+    <string name="hassan">Muhammad Hassan</string>
+    <string name="last_name">Last Name</string>
+    <string name="muhammad">Muhammad</string>
+    <string name="hassan_">Hassan</string>
+    <string name="edit">Edit</string>
+    <string name="moving_item">Moving Item</string>
+    <string name="username">Username</string>
+    <string name="don_t_have_an_account">Don’t have an account?</string>
+    <string name="abc_gmail_com">abc@gmail.com</string>
+    <string name="already_have_an_account">Already have an Account?</string>
+    <string name="pick_image_intent_chooser_title">Select source</string>
+    <string name="crop_image_activity_no_permissions">Cancelling, required permissions are not granted</string>
+    <string name="client_id">281683122905-fos13amt9bb8qcb6cu2a6j5u7c3nd5e9.apps.googleusercontent.com</string>
+    <string name="image_to_text_api_key">AIzaSyDF3P059_UiefejASBJTqn5JUs5KD5wlqk</string>
+    <string name="all">All</string>
+    <string name="folders">Folders</string>
+    <string name="trash_reminder_message">Your trash is too large! Want to make it light?</string>
+    <string name="action_delete_selection_forever">Delete Selection forever!</string>
+    <string name="trash_delete_selected_message">Selected notes will be permanentely deleted</string>
+    <string name="edit_hint_note_title">Title</string>
+    <string name="search_empty_placeholder">No results found</string>
+    <string name="nothing" />
+    <string name="empty_trash">Empty Trash</string>
+    <string name="do_you_want_to_empty_trash">Do you want to empty trash?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="delete_all">Delete All</string>
+    <string name="unarchive_all">Unarchive All</string>
+    <string name="restore_all">Restore All</string>
+    <string name="camera">Open camera</string>
+    <string name="gallery">Choose from gallery</string>
+    <string name="action_empty_trash">Empty Trash</string>
+    <string name="trash_empty_message">Are you sure? You want to empty the trash?</string>
+    <string name="edit_message_blank_note_discarded">Blank note discarded!</string>
+    <string name="edit_in_trash_message">Cannot edit note in recycle bin.</string>
+    <string name="restore">Restore</string>
+</resources>

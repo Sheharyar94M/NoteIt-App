@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="toolbarStyle" format="reference" />
+
+    <declare-styleable name="EditEditText">
+        <attr name="autoLink" format="boolean"/>
+    </declare-styleable>
+
+</resources>

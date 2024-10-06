@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:layout_gravity="center_horizontal"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="@drawable/transparent_ripple_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:src="@drawable/bookmark_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/label_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/poppins_regular"
+        android:padding="8dp"
+        android:text="@string/new_label"
+        android:textColor="@color/dialog_text_color"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_label"
+        app:layout_constraintEnd_toStartOf="@+id/label_chk"
+        app:layout_constraintStart_toEndOf="@+id/icon_label"
+        app:layout_constraintTop_toTopOf="@+id/icon_label" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/label_chk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:button="@drawable/checkbox_selector"
+        android:gravity="top"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:theme="@style/checkBoxStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/label_name"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

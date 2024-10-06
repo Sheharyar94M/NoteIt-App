@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <!--drawer fragments-->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="playaxis.appinn.note_it.main.fragment_home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+
+        <!--Move to bottom navigation-->
+        <action
+            android:id="@+id/home_to_todo_fragment"
+            app:destination="@id/todoFragment"
+            app:popUpTo="@id/todoFragment"
+            app:popUpToInclusive="false"/>
+        <action
+            android:id="@+id/home_to_draw_fragment"
+            app:destination="@id/drawFragment"
+            app:popUpTo="@id/drawFragment"
+            app:popUpToInclusive="false"
+            />
+        <action
+            android:id="@+id/home_to_add_edit_note_fragment"
+            app:destination="@id/addEditFragment"
+            app:popUpTo="@id/addEditFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/home_to_speech_fragment"
+            app:destination="@id/speechFragment"
+            app:popUpTo="@id/speechFragment"
+            app:popUpToInclusive="false"/>
+        <action
+            android:id="@+id/action_homeFragment_to_nav_graph_reminder"
+            app:destination="@id/nav_graph_reminder"
+            app:popUpTo="@id/nav_graph_reminder"
+            app:popUpToInclusive="false"/>
+        <action
+            android:id="@+id/action_homeFragment_to_createEditLabelFragment"
+            app:destination="@id/createEditLabelFragment"
+            app:popUpTo="@id/createEditLabelFragment"
+            app:popUpToInclusive="false"/>
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment"
+            app:popUpTo="@id/searchFragment"
+            app:popUpToInclusive="false"/>
+
+        <action
+            android:id="@+id/action_homeFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment"
+            app:popUpTo="@id/cameraFragment"
+            app:popUpToInclusive="false"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/createEditLabelFragment"
+        android:name="playaxis.appinn.note_it.main.drawer_fragments.label.CreateEditLabelFragment"
+        android:label="CreateEditLabelFragment"
+        tools:layout="@layout/fragment_label_create_edit">
+
+        <argument
+            android:name="noteIds"
+            app:argType="long[]" />
+
+        <argument
+            android:name="labelId"
+            android:defaultValue="0L"
+            app:argType="long" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/premiumFragment"
+        android:name="playaxis.appinn.note_it.main.drawer_fragments.PremiumFragment"
+        android:label="fragment_premium"
+        tools:layout="@layout/fragment_premium" />
+
+    <dialog
+        android:id="@+id/ratingFragment"
+        android:name="playaxis.appinn.note_it.main.drawer_fragments.RatingFragment"
+        android:label="fragment_rating_dialog"
+        tools:layout="@layout/fragment_rating" />
+
+    <!--bottom bar fragments-->
+    <fragment
+        android:id="@+id/todoFragment"
+        android:name="playaxis.appinn.note_it.main.fragment_home.bottom_bar_fragments.todo.TodoFragment"
+        android:label="fragment_todo"
+        tools:layout="@layout/fragment_todo" >
+
+        <argument
+            android:name="noteId"
+            android:defaultValue="0L"
+            app:argType="long"
+            />
+        <argument
+            android:name="labelId"
+            android:defaultValue="0L"
+            app:argType="long"
+            />
+        <argument
+            android:name="changeReminder"
+            android:defaultValue="false"
+            app:argType="boolean"
+            />
+        <argument
+            android:name="type"
+            android:defaultValue="0"
+            app:argType="integer"
+            />
+        <argument
+            android:name="title"
+            android:defaultValue=""
+            app:argType="string"
+            />
+        <argument
+            android:name="content"
+            android:defaultValue=""
+            app:argType="string"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/drawFragment"
+        android:name="playaxis.appinn.note_it.main.fragment_home.bottom_bar_fragments.draw.DrawFragment"
+        android:label="fragment_draw"
+        tools:layout="@layout/fragment_draw" >
+        <action
+            android:id="@+id/action_drawFragment_self"
+            app:destination="@id/drawFragment" />
+        <action
+            android:id="@+id/action_drawFragment_to_addEditFragment"
+            app:destination="@id/addEditFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addEditFragment"
+        android:name="playaxis.appinn.note_it.main.fragment_home.bottom_bar_fragments.note.AddEditFragment"
+        android:label="fragment_add_edit"
+        tools:layout="@layout/fragment_add_edit" >
+
+        <argument
+            android:name="noteId"
+            android:defaultValue="0L"
+            app:argType="long"
+            />
+        <argument
+            android:name="labelId"
+            android:defaultValue="0L"
+            app:argType="long"
+            />
+        <argument
+            android:name="changeReminder"
+            android:defaultValue="false"
+            app:argType="boolean"
+            />
+        <argument
+            android:name="type"
+            android:defaultValue="0"
+            app:argType="integer"
+            />
+        <argument
+            android:name="title"
+            android:defaultValue=""
+            app:argType="string"
+            />
+        <argument
+            android:name="content"
+            android:defaultValue=""
+            app:argType="string"
+            />
+        <action
+            android:id="@+id/action_addEditFragment_to_nav_graph_reminder"
+            app:destination="@id/nav_graph_reminder" />
+        <action
+            android:id="@+id/action_addEditFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+        <action
+            android:id="@+id/action_addEditFragment_to_drawFragment"
+            app:destination="@id/drawFragment" />
+        <action
+            android:id="@+id/action_addEditFragment_to_speechFragment"
+            app:destination="@id/speechFragment" />
+
+        <action
+            android:id="@+id/action_addEditFragment_to_createEditLabelFragment"
+            app:destination="@id/createEditLabelFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/speechFragment"
+        android:name="playaxis.appinn.note_it.main.fragment_home.bottom_bar_fragments.speech.SpeechFragment"
+        android:label="fragment_speech"
+        tools:layout="@layout/fragment_speech" >
+
+        <argument
+            android:name="noteId"
+            android:defaultValue="0L"
+            app:argType="long"
+            />
+        <argument
+            android:name="labelId"
+            android:defaultValue="0L"
+            app:argType="long"
+            />
+        <argument
+            android:name="changeReminder"
+            android:defaultValue="false"
+            app:argType="boolean"
+            />
+        <argument
+            android:name="type"
+            android:defaultValue="0"
+            app:argType="integer"
+            />
+        <argument
+            android:name="title"
+            android:defaultValue=""
+            app:argType="string"
+            />
+        <argument
+            android:name="content"
+            android:defaultValue=""
+            app:argType="string"
+            />
+    </fragment>
+
+    <!--Drawer actions-->
+    <action
+        android:id="@+id/main_to_Create_Edit_Label_fragment"
+        app:destination="@id/createEditLabelFragment"/>
+    <action
+        android:id="@+id/main_to_Premium_fragment"
+        app:destination="@id/premiumFragment"/>
+
+    <action
+        android:id="@+id/main_to_home_fragment"
+        app:destination="@id/homeFragment"/>
+
+    <action
+        android:id="@+id/main_to_rate_us_fragment"
+        app:destination="@id/ratingFragment"/>
+
+    <action
+        android:id="@+id/main_to_trash_fragment"
+        app:destination="@id/trashFragment" />
+    <action
+        android:id="@+id/main_to_reminder_fragment"
+        app:destination="@id/reminderFragment" />
+    <action
+        android:id="@+id/main_to_archive_fragment"
+        app:destination="@id/archiveFragment" />
+
+    <!--Raw direction-->
+    <action
+        android:id="@+id/main_to_cameraFragment"
+        app:destination="@id/cameraFragment" />
+
+    <action
+        android:id="@+id/main_to_drawFragment"
+        app:destination="@id/drawFragment" />
+
+    <action
+        android:id="@+id/main_to_speechFragment"
+        app:destination="@id/speechFragment" />
+
+    <navigation
+        android:id="@+id/nav_graph_reminder"
+        app:startDestination="@id/dialog_reminder">
+
+        <dialog
+            android:id="@+id/dialog_reminder"
+            android:name="playaxis.appinn.note_it.reminder.ReminderDialog"
+            tools:layout="@layout/dialog_reminder">
+            <argument
+                android:name="noteIds"
+                app:argType="long[]" />
+        </dialog>
+    </navigation>
+
+    <action
+        android:id="@+id/action_reminder"
+        app:destination="@id/nav_graph_reminder">
+        <argument
+            android:name="noteIds"
+            app:argType="long[]" />
+    </action>
+    <fragment
+        android:id="@+id/archiveFragment"
+        android:name="playaxis.appinn.note_it.main.drawer_fragments.archives.ArchiveFragment"
+        android:label="fragment_archive"
+        tools:layout="@layout/fragment_archive" >
+        <action
+            android:id="@+id/action_archiveFragment_to_addEditFragment"
+            app:destination="@id/addEditFragment" />
+        <action
+            android:id="@+id/action_archiveFragment_to_speechFragment"
+            app:destination="@id/speechFragment" />
+        <action
+            android:id="@+id/action_archiveFragment_to_todoFragment"
+            app:destination="@id/todoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trashFragment"
+        android:name="playaxis.appinn.note_it.main.drawer_fragments.trash.TrashFragment"
+        android:label="fragment_trash"
+        tools:layout="@layout/fragment_trash" >
+        <action
+            android:id="@+id/action_trashFragment_to_addEditFragment"
+            app:destination="@id/addEditFragment" />
+        <action
+            android:id="@+id/action_trashFragment_to_speechFragment"
+            app:destination="@id/speechFragment" />
+        <action
+            android:id="@+id/action_trashFragment_to_todoFragment"
+            app:destination="@id/todoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reminderFragment"
+        android:name="playaxis.appinn.note_it.main.drawer_fragments.reminder.ReminderFragment"
+        android:label="fragment_reminder"
+        tools:layout="@layout/fragment_reminder" />
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="playaxis.appinn.note_it.main.fragment_home.bottom_bar_fragments.note.scanned_note.CameraFragment"
+        android:label="fragment_camera"
+        tools:layout="@layout/fragment_camera" >
+
+        <argument
+            android:name="scanImage"
+            android:defaultValue="false"
+            app:argType="boolean"/>
+
+        <action
+            android:id="@+id/action_cameraFragment_to_scanFragment"
+            app:destination="@id/scanFragment" />
+        <action
+            android:id="@+id/action_cameraFragment_to_addEditFragment"
+            app:destination="@id/addEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scanFragment"
+        android:name="playaxis.appinn.note_it.main.fragment_home.bottom_bar_fragments.note.scanned_note.ScanFragment"
+        android:label="ScanFragment" />
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="playaxis.appinn.note_it.main.search.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search"/>
+
+</navigation>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
+    tools:context="playaxis.appinn.note_it.main.drawer_fragments.RatingFragment">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/search_bar_background"
+        android:padding="10dp"
+        app:cardCornerRadius="15dp"
+        app:strokeWidth="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/search_bar_background">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/heading_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="10dp"
+                android:text="@string/want_to_appreciate_us"
+                android:textColor="@color/dialog_text_color"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/wave_progress_color"
+                android:layout_marginVertical="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/content_text"
+                app:layout_constraintEnd_toEndOf="@+id/heading_text"
+                app:layout_constraintStart_toStartOf="@+id/heading_text"
+                app:layout_constraintTop_toBottomOf="@+id/heading_text" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/content_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="8dp"
+                android:text="@string/we_are_sure_that_you_like_our_app_and_want_to_appreciate_us_rate_us_5_stars"
+                android:textAlignment="center"
+                android:textColor="@color/dialog_text_color"
+                android:textSize="15.85sp"
+                app:layout_constraintEnd_toEndOf="@+id/view"
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                app:layout_constraintBottom_toTopOf="@+id/rating_image"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/rating_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/rating_image"
+                android:layout_margin="18dp"
+                app:layout_constraintBottom_toTopOf="@+id/rating_bar"
+                app:layout_constraintEnd_toEndOf="@+id/content_text"
+                app:layout_constraintStart_toStartOf="@+id/content_text"
+                app:layout_constraintTop_toBottomOf="@+id/content_text" />
+
+            <com.willy.ratingbar.ScaleRatingBar
+                android:id="@+id/rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/conclusion_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rating_image"
+                app:srb_drawableEmpty="@drawable/empty_star"
+                app:srb_drawableFilled="@drawable/filled_star"
+                app:srb_starHeight="30dp"
+                app:srb_starPadding="8dp"
+                app:srb_starWidth="30dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/conclusion_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="8dp"
+                android:text="@string/no_appreciation"
+                android:textAlignment="center"
+                android:textColor="@color/dialog_text_color"
+                android:textSize="16sp"
+                android:layout_marginBottom="18dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="@drawable/transparent_ripple_background"
+                app:layout_constraintEnd_toEndOf="@+id/rating_bar"
+                app:layout_constraintStart_toStartOf="@+id/rating_bar"
+                app:layout_constraintTop_toBottomOf="@+id/rating_bar"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

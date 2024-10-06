@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_layer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_audio_item"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/view_audio_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/transparent_ripple_background"
+            android:padding="5dp"
+            android:src="@drawable/play_arrow"
+            app:layout_constraintEnd_toStartOf="@+id/audio_visual"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.masoudss.lib.WaveformSeekBar
+            android:id="@+id/audio_visual"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/audio_duration"
+            app:layout_constraintEnd_toStartOf="@+id/audio_duration"
+            app:layout_constraintStart_toEndOf="@+id/play"
+            app:layout_constraintTop_toTopOf="@+id/audio_duration"
+            app:wave_corner_radius="5dp"
+            app:wave_gap="1dp"
+            app:wave_gravity="center"
+            app:wave_max_progress="10"
+            app:wave_min_height="5dp"
+            app:wave_padding_Bottom="2dp"
+            app:wave_padding_left="2dp"
+            app:wave_padding_right="2dp"
+            app:wave_padding_top="2dp"
+            app:wave_width="5dp"
+            app:wave_progress_color="@color/white"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/audio_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="00:00"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/audio_visual"
+            app:layout_constraintBottom_toBottomOf="@+id/delete_audio"
+            app:layout_constraintEnd_toStartOf="@+id/delete_audio"
+            app:layout_constraintTop_toTopOf="@+id/delete_audio" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/delete_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/transparent_ripple_background"
+            android:padding="5dp"
+            android:src="@drawable/delete_icon_white"
+            app:layout_constraintStart_toEndOf="@+id/audio_duration"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--    <com.google.android.material.textfield.TextInputEditText-->
+<!--        android:id="@+id/note_content"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_marginBottom="5dp"-->
+<!--        android:background="@android:color/transparent"-->
+<!--        android:ellipsize="end"-->
+<!--        android:enabled="false"-->
+<!--        android:fontFamily="@font/poppins_regular"-->
+<!--        android:fontFeatureSettings="pnum, lnum"-->
+<!--        android:gravity="start|top"-->
+<!--        android:inputType="textMultiLine|textCapSentences"-->
+<!--        android:letterSpacing="0.01"-->
+<!--        android:lineSpacingExtra="-6sp"-->
+<!--        android:lines="5"-->
+<!--        android:paddingVertical="10dp"-->
+<!--        android:text="@string/lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_etiam_vulputate_id_libero_nec_suscipit_quisque_eu_vulputate_nibh"-->
+<!--        android:textAppearance="?textAppearanceBody2"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textColorHint="@color/white"-->
+<!--        android:textCursorDrawable="@drawable/cursor"-->
+<!--        android:textSize="16sp"-->
+<!--        app:fontFamily="@font/poppins_regular"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/view_audio_item"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/top_layer" />-->
+
+    <View
+        android:id="@+id/view_audio_item"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/wave_progress_color"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_layer" />
+</androidx.constraintlayout.widget.ConstraintLayout>

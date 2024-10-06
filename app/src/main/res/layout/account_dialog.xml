@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_background"
+    android:layout_margin="8dp"
+    android:layout_gravity="center">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/account_icon"
+        android:scaleType="centerCrop"
+        app:civ_border_width="0dp"
+        android:layout_margin="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/username"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/user_name"
+        android:textColor="@color/dialog_text_color"
+        android:textSize="24sp"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/profile_image"
+        app:layout_constraintStart_toStartOf="@+id/profile_image"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/xyz_xyz_com"
+        android:textColor="@color/dialog_text_color"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/username"
+        app:layout_constraintStart_toStartOf="@+id/username"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="256dp"
+        android:layout_height="1dp"
+        android:layout_margin="25dp"
+        android:background="@color/wave_progress_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/add_another_account"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:drawableStart="@drawable/person_add"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/poppins_regular"
+        android:padding="5dp"
+        android:text="@string/add_another_account"
+        android:textColor="@color/dialog_text_color"
+        android:textSize="18sp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/transparent_ripple_background"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintBottom_toTopOf="@+id/manage_account"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/manage_account"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:drawableStart="@drawable/manage_accounts"
+        android:drawablePadding="10dp"
+        android:focusable="true"
+        android:fontFamily="@font/poppins_regular"
+        android:foreground="@drawable/transparent_ripple_background"
+        android:padding="5dp"
+        android:text="@string/manage_your_account"
+        android:textColor="@color/dialog_text_color"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/add_another_account"
+        app:layout_constraintStart_toStartOf="@+id/add_another_account"
+        app:layout_constraintTop_toBottomOf="@+id/add_another_account" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/close_button_background"
+        android:src="@drawable/close"
+        android:padding="7dp"
+        android:elevation="10dp"
+        android:layout_margin="15dp"
+        android:foreground="@drawable/transparent_ripple_background"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

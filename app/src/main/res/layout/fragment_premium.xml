@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
+    tools:context="playaxis.appinn.note_it.main.drawer_fragments.PremiumFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        app:cardCornerRadius="15dp"
+        app:strokeWidth="0dp"
+        android:background="@drawable/premium_card_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/premium_card_background">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/heading_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="10dp"
+                android:text="@string/premium_user"
+                android:textColor="@color/theme_color"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/p1_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/p1_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/premium_check_box"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="start|center_vertical"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="@string/_100_ads_free"
+                android:textColor="@color/theme_color"
+                android:textSize="15.85sp"
+                android:layout_marginHorizontal="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/p2_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/heading_text" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/p2_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/premium_check_box"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="start|center_vertical"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="@string/lock_unlimited_notes_and_folder"
+                android:textColor="@color/theme_color"
+                android:textSize="15.85sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/p1_text"
+                app:layout_constraintTop_toBottomOf="@+id/p1_text"
+                app:layout_constraintBottom_toTopOf="@+id/p3_text"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/p3_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/premium_check_box"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="start|center_vertical"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="@string/scan_unlimited_images_to_extract_text"
+                android:textColor="@color/theme_color"
+                android:textSize="15.85sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/p2_text"
+                app:layout_constraintTop_toBottomOf="@+id/p2_text" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/heading_2_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="10dp"
+                android:text="@string/unlock_all_features"
+                android:textColor="@color/theme_color"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/p3_text" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/theme_color"
+                app:layout_constraintTop_toBottomOf="@+id/heading_2_text"
+                app:layout_constraintBottom_toTopOf="@+id/plans_list"
+                app:layout_constraintEnd_toEndOf="@+id/heading_2_text"
+                app:layout_constraintStart_toStartOf="@+id/heading_2_text" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/plans_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="30dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="@+id/view"
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                app:layout_constraintBottom_toTopOf="@+id/upgrade_button"
+                tools:itemCount="3"
+                tools:listitem="@layout/subscription_item_view"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/upgrade_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/upgrade_button_background"
+                android:text="@string/upgrade_now"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/upgrade_button_color"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:foreground="@drawable/transparent_ripple_background"
+                android:elevation="10dp"
+                android:padding="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/plans_list"
+                app:layout_constraintBottom_toTopOf="@+id/close_button"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/close_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/no_thanks"
+                android:textSize="18sp"
+                android:textColor="@color/theme_color"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="10dp"
+                android:layout_marginVertical="12dp"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="@drawable/transparent_ripple_background"
+                app:layout_constraintTop_toBottomOf="@+id/upgrade_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/upgrade_button"
+                app:layout_constraintStart_toStartOf="@+id/upgrade_button" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

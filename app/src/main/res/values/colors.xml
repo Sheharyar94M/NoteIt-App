@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="theme_color">#202124</color>
+    <color name="search_bar_background">#2E3440</color>
+    <color name="timePicker_clock_background">#525862</color>
+    <color name="hint_text_color">#C8DBF0</color>
+    <color name="selected_tab_color">#5BD8FF</color>
+    <color name="folder_item_text_color">#C8DBF0</color>
+
+    <color name="red">#FF0000</color>
+    <color name="blue">#0040FF</color>
+    <color name="green">#10FF00</color>
+    <color name="yellow">#FFFA00</color>
+
+    //colors list
+    <color name="color_1">#2D4CAB</color>
+    <color name="color_2">#6C2DAB</color>
+    <color name="color_3">#AB2D8F</color>
+    <color name="color_4">#AB8F2D</color>
+    <color name="color_5">#7BAB2D</color>
+    <color name="color_6">#37AB2D</color>
+    <color name="color_7">#2DAB85</color>
+    <color name="color_8">#302DAB</color>
+    <color name="color_9">#AB2D2D</color>
+    <color name="color_10">#AB532D</color>
+    <color name="color_11">#2D8DAB</color>
+
+
+    //gradient colors
+    <color name="item_1.0">#F761A1</color>
+    <color name="item_1.1">#8C1BAB</color>
+    <color name="item_2.0">#FDD819</color>
+    <color name="item_2.1">#E80505</color>
+    <color name="item_3.0">#43CBFF</color>
+    <color name="item_3.1">#9708CC</color>
+    <color name="item_4.0">#FFF720</color>
+    <color name="item_4.1">#3CD500</color>
+    <color name="item_5.0">#F05F57</color>
+    <color name="item_5.1">#360940</color>
+    <color name="item_6.0">#90F7EC</color>
+    <color name="item_6.1">#32CCBC</color>
+    <color name="item_7.0">#52E5E7</color>
+    <color name="item_7.1">#130CB7</color>
+    <color name="text_color_unselect">#9EADBD</color>
+    <color name="color_highlight">#FFD740</color>
+    <color name="dialog_text_color">#C8DBF0</color>
+    <color name="wave_progress_color">#5BD8FF</color>
+
+    <color name="close_button_color">#788490</color>
+    <color name="error_color">#FF0000</color>
+    <color name="rating_premium_background">#1A1A1A</color>
+    <color name="upgrade_button_color">#1C1B1F</color>
+    <color name="subs_heading_back">#0214B1</color>
+
+</resources>

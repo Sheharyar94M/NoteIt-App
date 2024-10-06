@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dialog_background"
+    android:layout_gravity="center"
+    android:fitsSystemWindows="true"
+    android:padding="10dp"
+    android:layout_margin="10dp"
+    android:elevation="10dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/heading_anim_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="12dp"
+        android:fontFamily="@font/poppins_regular"
+        android:letterSpacing="0.02"
+        android:text="@string/moving_item"
+        android:textColor="@color/dialog_text_color"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/moving_anim"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/item_sending_image"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/moving_anim"
+        app:layout_constraintEnd_toStartOf="@+id/moving_anim"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/moving_anim"
+        android:layout_width="160dp"
+        android:layout_height="100dp"
+        android:elevation="15dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/image2"
+        app:layout_constraintStart_toEndOf="@+id/image1"
+        app:layout_constraintTop_toBottomOf="@+id/heading_anim_dialog"
+        app:lottie_loop="true" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image2"
+        android:layout_width="60dp"
+        android:layout_height="80dp"
+        android:src="@drawable/folder_icon"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/folder_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/moving_anim"
+        app:layout_constraintStart_toEndOf="@+id/moving_anim"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/folder_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="folder name"
+        android:textColor="@color/dialog_text_color"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/moving_anim"
+        app:layout_constraintEnd_toEndOf="@+id/image2"
+        app:layout_constraintStart_toStartOf="@+id/image2"
+        app:layout_constraintTop_toBottomOf="@+id/image2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,313 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.QuickNotepad" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+    </style>
+
+    <style name="Theme.QuickNotepad" parent="Base.Theme.QuickNotepad" />
+
+    //Splash
+    <style name="Theme.AppSplash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/theme_color</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/notepad</item>
+        <item name="windowSplashScreenAnimationDuration">500</item>
+        <item name="postSplashScreenTheme">@style/Theme.QuickNotepad</item>
+
+    </style>
+
+    //tab theme
+    <style name="MyCustomTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+        <item name="font">@font/poppins_regular</item>
+        <item name="tabTextColor">@color/white</item>
+        <item name="activeIndicatorLabelPadding">0dp</item>
+        <item name="indicatorColor">@color/selected_tab_color</item>
+    </style>
+
+    //InputLayout theme
+    <style name="inputlayoutTheme" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="android:textColorHintInverse">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="hintTextColor">@drawable/hint_text_color</item>
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+        <item name="boxBackgroundColor">@android:color/transparent</item>
+        <item name="boxCornerRadiusBottomEnd">13dp</item>
+        <item name="boxCornerRadiusBottomStart">13dp</item>
+        <item name="boxCornerRadiusTopEnd">13dp</item>
+        <item name="boxCornerRadiusTopStart">13dp</item>
+        <item name="boxStrokeColor">@android:color/transparent</item>
+
+    </style>
+
+    <style name="NoteSwipeIconStyle">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:tintMode">src_in</item>
+        <item name="tint">@color/dialog_text_color</item>
+    </style>
+
+    <style name="NoteListItemCardStyle">
+        <item name="cardBackgroundColor">@color/theme_color</item>
+        <item name="android:foreground">@drawable/transparent_ripple_background</item>
+        <item name="cornerRadius">5dp</item>
+        <item name="strokeColor">@color/dialog_text_color</item>
+        <item name="strokeWidth">1.5dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="android:checkable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_marginStart">5dp</item>
+        <item name="android:layout_marginEnd">5dp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+    <style name="NoteTitleStyle">
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textAppearance">?textAppearanceSubtitle1</item>
+        <item name="android:textDirection">anyRtl</item>
+        <item name="android:textColor">@color/dialog_text_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="NoteDateStyle">
+        <item name="android:textAppearance">?textAppearanceCaption</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">@color/dialog_text_color</item>
+    </style>
+
+    <style name="NoteReminderChipStyleBase">
+        <item name="android:textAppearance">?textAppearanceCaption</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="chipBackgroundColor">@color/search_bar_background</item>
+        <item name="chipStrokeColor">@color/white</item>
+        <item name="chipStrokeWidth">0.7dp</item>
+        <item name="chipIconSize">16dp</item>
+        <item name="chipStartPadding">8dp</item>
+        <item name="chipIconTint">@color/white</item>
+    </style>
+
+    <style name="NoteReminderChipStyle" parent="NoteReminderChipStyleBase">
+        <item name="android:focusable">false</item>
+        <item name="android:clickable">false</item>
+        <item name="rippleColor">@android:color/transparent</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="chipMinHeight">28dp</item>
+        <item name="chipMinTouchTargetSize">0dp</item>
+    </style>
+
+    <style name="NoteActionButtonStyle" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textColor">@color/dialog_text_color</item>
+        <item name="android:textSize">12sp</item>
+        <item name="iconTint">@color/dialog_text_color</item>
+        <item name="iconGravity">textStart</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <style name="NoteLabelChipStyle">
+        <item name="android:ellipsize">end</item>
+        <item name="chipBackgroundColor">@color/theme_color</item>
+        <item name="chipCornerRadius">5dp</item>
+        <item name="chipStrokeColor">@color/dialog_text_color</item>
+        <item name="chipStrokeWidth">0.5dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="chipMinTouchTargetSize">0dp</item>
+    </style>
+
+    <style name="BoxInputLayoutStyle" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor" tools:ignore="PrivateResource">@color/mtrl_filled_background_color</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="hintEnabled">false</item>
+    </style>
+
+    <style name="BoxInputStyle">
+        <item name="android:textAppearance">?textAppearanceBody1</item>
+        <item name="android:gravity">center</item>
+        <item name="boxStrokeColor">@null</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:focusable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:inputType">none|textNoSuggestions</item>
+    </style>
+
+    //dialog fragment
+    <style name="TransparentDialogFragment" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <!-- Style for the error color of the EditText -->
+    <style name="ErrorColorEditText" parent="Widget.AppCompat.EditText">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+        <item name="errorIconTint">@color/white</item>
+        <item name="errorEnabled">true</item>
+        <item name="colorError" tools:targetApi="o">@color/white</item>
+        <item name="boxStrokeErrorColor">@color/white</item>
+        <item name="colorErrorContainer">@color/white</item>
+        <item name="errorIconTintMode">src_over</item>
+    </style>
+
+    <style name="CustomPopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@drawable/menu_dialog_background</item>
+        <item name="font">@font/poppins_regular</item>
+        <item name="itemRippleColor">@color/dialog_text_color</item>
+        <item name="itemTextColor">@color/dialog_text_color</item>
+        <item name="animateMenuItems">true</item>
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+    <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/white</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/theme_color</item>
+    </style>
+
+    //theme spinner
+    <style name="spinnerTheme" parent="Theme.AppCompat.DayNight">
+        <item name="android:textColor">@color/dialog_text_color</item>
+        <item name="tint">@color/dialog_text_color</item>
+        <item name="font">@font/poppins_regular</item>
+    </style>
+
+    <style name="spinner_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/gradient_spinner</item>
+        <item name="android:popupBackground">@color/search_bar_background</item>
+        <item name="hintEnabled">true</item>
+        <item name="hintTextColor">@color/dialog_text_color</item>
+        <item name="android:dropDownHeight">100dp</item>
+    </style>
+
+    <!---Material Calender theme here-->
+    //Calender date theme
+    <style name="MaterialCalendarTheme" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+
+        <!-- Header panel -->
+        <item name="materialCalendarHeaderLayout">@style/MaterialCalendar.HeaderLayout1</item>
+        <!-- Buttons -->
+        <item name="buttonBarPositiveButtonStyle">@style/TextButton.Dialog1</item>
+        <item name="buttonBarNegativeButtonStyle">@style/TextButton.Dialog1</item>
+
+        <item name="materialCalendarStyle">@style/DefaultCalendarStyle</item>
+    </style>
+
+    //date picker body
+    <style name="DefaultCalendarStyle" parent="Widget.MaterialComponents.MaterialCalendar">
+        <!--<item name="android:background">?attr/colorPrimary</item>-->
+        <item name="daySelectedStyle">@style/DefaultDaySelectedStyle</item>
+        <item name="yearSelectedStyle">@style/DefaultYearSelectedStyle</item>
+    </style>
+
+    //year
+    <style name="DefaultYearSelectedStyle" parent="Widget.MaterialComponents.MaterialCalendar.Year.Selected">
+        <!--<item name="android:background">?attr/colorPrimary</item>-->
+        <item name="itemFillColor">@color/search_bar_background</item>
+        <item name="itemTextColor">@color/dialog_text_color</item>
+    </style>
+
+    //Day
+    <style name="DefaultDaySelectedStyle" parent="Widget.MaterialComponents.MaterialCalendar.Day.Selected">
+        <!--<item name="android:background">?attr/colorPrimary</item>-->
+        <item name="itemFillColor">@color/search_bar_background</item>
+        <item name="itemTextColor">@color/dialog_text_color</item>
+    </style>
+
+    //header
+    <style name="MaterialCalendar.HeaderLayout1" parent="Widget.MaterialComponents.MaterialCalendar.HeaderLayout">
+        <!--<item name="android:background">?attr/colorPrimary</item>-->
+        <item name="android:background">@color/search_bar_background</item>
+    </style>
+    //buttons
+    <style name="TextButton.Dialog1" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/search_bar_background</item>
+    </style>
+
+    <!--Material Time picker-->
+    <style name="CustomMaterialTimePicker" parent="ThemeOverlay.Material3.MaterialTimePicker">
+        <!--clock hand color and positive and negative button text color-->
+        <item name="colorPrimary">@color/dialog_text_color</item>
+        <!--digital clock unselected text-->
+        <item name="colorOnSurface">@color/dialog_text_color</item>
+        <!--digital clock unselected background-->
+        <item name="colorSurface">@color/timePicker_clock_background</item>
+        <!--selected digital clock background-->
+        <item name="colorPrimaryContainer">@color/dialog_text_color</item>
+        <!--selected digital clock ripple-->
+        <item name="colorOnPrimaryContainer">@color/theme_color</item>
+        <!--heading_keyboard-->
+        <item name="colorOnSurfaceVariant">@color/dialog_text_color</item>
+        <!--background Dialog-->
+        <item name="colorSurfaceContainerHigh">@color/search_bar_background</item>
+        <!--digital clock unselected and clock background -->
+        <item name="colorSurfaceContainerHighest">@color/timePicker_clock_background</item>
+        <!--AM/PM selection-->
+        <item name="colorOnTertiaryContainer">@color/theme_color</item>
+        <item name="colorTertiaryContainer">@color/dialog_text_color</item>
+        <!--Giving style to analog dialog-->
+        <item name="materialClockStyle">@style/clockMaterial</item>
+    </style>
+
+    <style name="clockMaterial" parent="Widget.Material3.MaterialTimePicker.Clock">
+        <item name="clockFaceBackgroundColor">@color/timePicker_clock_background</item>
+        <item name="clockHandColor">@color/theme_color</item>
+        <item name="clockNumberTextColor">@color/dialog_text_color</item>
+        <item name="android:textColor">@color/dialog_text_color</item>
+        <item name="tabBackground">@color/timePicker_clock_background</item>
+
+    </style>
+
+
+    //Edit chip style
+    <style name="NoteReminderEditChipStyle" parent="NoteReminderChipStyleBase" />
+
+    <style name="checkBoxStyle" parent="Base.Theme.AppCompat">
+        <item name="colorAccent">@color/dialog_text_color</item>
+<!--        <item name="android:textColorSecondary">@color/dialog_text_color</item>-->
+    </style>
+
+    //Recurrence dialog color
+    <style name="AppTheme" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="recurrencePickerStyle">@style/RecurrencePickerStyleCustom</item>
+
+    </style>
+
+    <!-- Recurrence picker theme -->
+    <style name="RecurrencePickerStyleCustom" parent="RecurrencePickerStyle">
+        <!-- You can customize the recurrence picker style here -->
+        <!-- This line changes the text appearance of subtitle text views -->
+        <item name="rpListItemStyle">@style/MySubtitleTextAppearance</item>
+        <item name="rpListStyle">@style/CustomRpListStyle</item>
+    </style>
+
+    <style name="MySubtitleTextAppearance" parent="RpPickerSubtitleTextAppearance">
+        <!-- Don't forget to specify the parent! -->
+        <item name="android:textColor">@color/dialog_text_color</item>
+    </style>
+
+    <style name="CustomRpListStyle" parent="RpListStyle">
+        <!-- Don't forget to specify the parent! -->
+        <item name="background">@drawable/reminder_background</item>
+    </style>
+
+    <style name="roundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+</resources>

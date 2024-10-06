@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dialog_background"
+    android:layout_gravity="center"
+    android:fitsSystemWindows="true"
+    android:padding="10dp"
+    android:layout_margin="10dp"
+    android:elevation="10dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/poppins_regular"
+        android:letterSpacing="0.02"
+        android:text="@string/unlock"
+        android:textColor="@color/dialog_text_color"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/password_container"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/password_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heading"
+        app:layout_constraintBottom_toTopOf="@+id/forget_change_password_container">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/password_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:letterSpacing="0.03"
+            android:lineSpacingExtra="5sp"
+            android:padding="5dp"
+            android:text="@string/enter_password"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:fontFamily="@font/poppins_regular" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_container_unlock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/dialog_text_color"
+            app:boxStrokeColor="@color/dialog_text_color"
+            app:hintEnabled="true"
+            app:hintTextColor="@color/dialog_text_color"
+            app:cursorColor="@color/dialog_text_color"
+            android:focusable="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="8sp"
+                android:textColor="@color/dialog_text_color"
+                android:textColorHint="@color/dialog_text_color"
+                android:textSize="16sp"
+                android:textCursorDrawable="@drawable/cursor" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/forget_change_password_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/password_container"
+        app:layout_constraintStart_toStartOf="@+id/password_container"
+        app:layout_constraintTop_toBottomOf="@+id/password_container"
+        app:layout_constraintBottom_toTopOf="@+id/finger_print_anim">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/change_password_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/change_password"
+            android:textColor="@color/wave_progress_color"
+            android:textSize="16sp"
+            app:fontFamily="@font/poppins_regular"
+            android:lineSpacingExtra="5sp"
+            android:letterSpacing="0.03"
+            android:paddingTop="15dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/transparent_ripple_background"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/forget_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/forget_password"
+            android:textColor="@color/wave_progress_color"
+            android:textSize="16sp"
+            app:fontFamily="@font/poppins_regular"
+            android:lineSpacingExtra="5sp"
+            android:letterSpacing="0.03"
+            android:paddingTop="6dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/transparent_ripple_background"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/finger_print_anim"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:elevation="15dp"
+        android:scaleType="fitXY"
+        app:lottie_rawRes="@raw/fingerprint"
+        app:lottie_loop="false"
+        android:scaleX="3.5"
+        android:scaleY="3.5"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_margin="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/forget_change_password_container"
+        app:layout_constraintStart_toStartOf="@+id/forget_change_password_container"
+        app:layout_constraintEnd_toEndOf="@+id/forget_change_password_container"
+        app:layout_constraintBottom_toTopOf="@+id/buttons_layout" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:elevation="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/finger_print_anim">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_regular"
+            android:foreground="@drawable/transparent_ripple_background"
+            android:padding="5dp"
+            android:text="@string/cancel"
+            android:textColor="@color/text_color_unselect"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/unlock_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_regular"
+            android:foreground="@drawable/transparent_ripple_background"
+            android:padding="5dp"
+            android:text="@string/unlock"
+            android:textColor="@color/selected_tab_color"
+            android:textSize="16sp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>

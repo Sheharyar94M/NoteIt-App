@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+    <ImageView
+        android:id="@+id/checkbox_imv"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_weight="0"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/checkbox_selected"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="?textAppearanceSubtitle1"
+        android:tintMode="src_in"
+        tools:ignore="ContentDescription"
+        tools:text="Lorem ipsum dolor sit amet"
+        />
+
+    <TextView
+        android:id="@+id/content_txv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="8dp"
+        android:layout_gravity="center_vertical"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="?textAppearanceBody2"
+        android:textDirection="anyRtl"
+        android:textColor="@color/dialog_text_color"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="15sp"
+        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        />
+
+</LinearLayout>

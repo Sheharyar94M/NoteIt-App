@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp"
+    android:paddingStart="8dp"
+    android:paddingEnd="16dp"
+    android:background="@android:color/transparent"
+    android:gravity="center">
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/item_chk"
+        android:theme="@style/checkBoxStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:gravity="top"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:button="@drawable/checkbox_selector"
+        />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/content_edt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:background="@null"
+        android:imeOptions="flagNoExtractUi"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine|textCapSentences|textAutoCorrect"
+        android:textAppearance="?textAppearanceBody1"
+        android:textDirection="anyRtl"
+        android:textColor="@color/dialog_text_color"
+        android:textSize="15sp"
+        android:linksClickable="true"
+        app:emojiCompatEnabled="false"
+        app:autoLink="true"
+        tools:ignore="LabelFor,RtlSymmetry"
+        android:fontFamily="@font/poppins_regular"
+        android:textColorHint="@color/dialog_text_color"
+        android:paddingStart="15dp"
+        android:textCursorDrawable="@drawable/cursor"
+        />
+
+    <ImageView
+        android:id="@+id/delete_imv"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_weight="0"
+        android:layout_marginStart="4dp"
+        android:layout_gravity="center"
+        android:padding="4dp"
+        android:foreground="@drawable/transparent_ripple_background"
+        android:src="@drawable/ic_close"
+        android:visibility="invisible"
+        tools:ignore="ContentDescription"
+        tools:visibility="visible"
+        />
+
+</LinearLayout>

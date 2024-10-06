@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="25dp"
+    android:height="20dp"
+    android:viewportWidth="28"
+    android:viewportHeight="23">
+  <path
+      android:name="eraser1"
+      android:pathData="M3.81,23L0.825,20.125C0.287,19.606 0.012,18.964 0,18.197C-0.011,17.43 0.252,16.777 0.79,16.235L16.238,0.812C16.777,0.271 17.438,0 18.222,0C19.006,0 19.667,0.259 20.206,0.778L27.192,7.509C27.731,8.027 28,8.67 28,9.437C28,10.203 27.731,10.846 27.192,11.365L15.396,23H3.81Z"
+      android:fillColor="#C8DBF0"/>
+</vector>

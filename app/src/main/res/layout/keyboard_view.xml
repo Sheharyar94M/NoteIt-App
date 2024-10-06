@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/keyboard_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/theme_color"
+    android:padding="10dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/add_items_keyboard_view_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:src="@drawable/add_items_note_icon"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/transparent_ripple_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/color_keyboard_view_button"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/color_keyboard_view_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:src="@drawable/color_select_icon"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/transparent_ripple_background"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/add_items_keyboard_view_button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/undo_redo"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/undo_redo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        app:layout_constraintStart_toEndOf="@+id/color_keyboard_view_button"
+        app:layout_constraintTop_toTopOf="@+id/color_keyboard_view_button"
+        app:layout_constraintBottom_toBottomOf="@+id/color_keyboard_view_button"
+        app:layout_constraintEnd_toStartOf="@+id/format_keyboard_view_button">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/undo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/undo"
+            android:padding="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/transparent_ripple_background"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/redo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/redo"
+            android:padding="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/transparent_ripple_background"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/format_keyboard_view_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:src="@drawable/format_color_text"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/transparent_ripple_background"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/undo_redo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/scanner_keyboard_view_button"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/scanner_keyboard_view_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:src="@drawable/center_focus_weak"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/transparent_ripple_background"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/format_keyboard_view_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    <androidx.appcompat.widget.AppCompatImageView-->
+<!--        android:id="@+id/reaction_keyboard_view_button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:padding="5dp"-->
+<!--        android:src="@drawable/add_reaction"-->
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        android:foreground="@drawable/transparent_ripple_background"-->
+<!--        android:layout_marginStart="5dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/scanner_keyboard_view_button"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/menu_keyboard_view_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:src="@drawable/menu_dots_icon"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/transparent_ripple_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

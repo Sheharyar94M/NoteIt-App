@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "835526189043",
+    "firebase_url": "https://appit-76031-default-rtdb.firebaseio.com",
+    "project_id": "appit-76031",
+    "storage_bucket": "appit-76031.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835526189043:android:196a99cf42b73af3957c86",
+        "android_client_info": {
+          "package_name": "com.example.quicknotepad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "835526189043-6s0uqbe53eeu44amuha879bvftl4d26d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.quicknotepad",
+            "certificate_hash": "3b0f0b99ef3b454a96e242a3c1a1b7ed1b1c53f4"
+          }
+        },
+        {
+          "client_id": "835526189043-iocbvk9e2pi9al8tk5tjic9upj2jh08p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDBou723QWMUa7DxXGDnLgHsEz3IXUTZc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "835526189043-iocbvk9e2pi9al8tk5tjic9upj2jh08p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

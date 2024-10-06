@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/noteListFragment">
+
+    <fragment
+        android:id="@+id/noteListFragment"
+        android:name="playaxis.appinn.note_it.main.fragment_home.fragments.note.NoteListFragment"
+        android:label="fragment_note_list"
+        tools:layout="@layout/fragment_note_list" />
+
+    <fragment
+        android:id="@+id/folderListFragment"
+        android:name="playaxis.appinn.note_it.main.fragment_home.fragments.folder.FolderListFragment"
+        android:label="fragment_folder_list"
+        tools:layout="@layout/fragment_folder_list" />
+
+
+    <action
+        android:id="@+id/to_note_list_fragment"
+        app:destination="@+id/noteListFragment"/>
+
+    <action
+        android:id="@+id/to_folder_list_fragment"
+        app:destination="@+id/folderListFragment"/>
+</navigation>

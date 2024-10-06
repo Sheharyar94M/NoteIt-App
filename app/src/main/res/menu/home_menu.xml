@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/archive"
+        android:icon="@drawable/archive_menu_option"
+        android:title="@string/archive_text_"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/delete"
+        android:icon="@drawable/delete_menu_option"
+        android:title="@string/action_delete"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/make_copy"
+        android:icon="@drawable/copy_menu_option"
+        android:title="@string/copy"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/send"
+        android:icon="@drawable/share_menu_option"
+        android:title="@string/send"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/move_to_folder"
+        android:icon="@drawable/drive_file_move_menu_option"
+        android:title="@string/move"
+        app:showAsAction="never"/>
+</menu>

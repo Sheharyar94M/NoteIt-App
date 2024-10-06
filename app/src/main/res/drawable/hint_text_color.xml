@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Color when TextInputLayout is activated (focused) -->
+    <item android:color="@color/hint_text_color" android:state_focused="true" />
+
+    <!-- Default color for the hint -->
+    <item android:color="@color/hint_text_color" android:state_focused="false"/>
+</selector>

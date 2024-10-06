@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/dialog_background"
+    android:paddingTop="20dp"
+    android:paddingBottom="10dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/color_button_dialog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/poppins_regular"
+        android:foreground="@drawable/transparent_ripple_background"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/color"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/gradient_button_dialog"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gradient_button_dialog"
+        app:layout_constraintBottom_toBottomOf="@+id/gradient_button_dialog"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/gradient_button_dialog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/poppins_regular"
+        android:foreground="@drawable/transparent_ripple_background"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/gradient"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/wallpaper_button_dialog"
+        app:layout_constraintStart_toEndOf="@+id/color_button_dialog"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/colors_gradients_wallpapers_list"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/wallpaper_button_dialog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/poppins_regular"
+        android:foreground="@drawable/transparent_ripple_background"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/wallpaper"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gradient_button_dialog"
+        app:layout_constraintTop_toTopOf="@+id/gradient_button_dialog"
+        app:layout_constraintBottom_toBottomOf="@+id/gradient_button_dialog"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/colors_gradients_wallpapers_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/buttons_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gradient_button_dialog"
+        app:spanCount="4"
+        tools:itemCount="8"
+        android:paddingStart="8dp"
+        tools:listitem="@layout/color_palette_dialog_list_item_view"
+        tools:ignore="RtlSymmetry" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/buttons_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colors_gradients_wallpapers_list">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_regular"
+            android:foreground="@drawable/transparent_ripple_background"
+            android:padding="5dp"
+            android:text="@string/cancel"
+            android:textColor="@color/text_color_unselect"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_regular"
+            android:foreground="@drawable/transparent_ripple_background"
+            android:padding="5dp"
+            android:text="@string/save"
+            android:textColor="@color/selected_tab_color"
+            android:textSize="16sp"
+            android:layout_marginStart="10dp"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>

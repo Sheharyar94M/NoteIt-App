@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/check_items"
+        android:icon="@drawable/checkbox_menu_option"
+        android:title="@string/check_items"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/delete_items_done"
+        android:icon="@drawable/delete_items_menu_option"
+        android:title="@string/delete_items"
+        app:showAsAction="never"/>
+
+</menu>

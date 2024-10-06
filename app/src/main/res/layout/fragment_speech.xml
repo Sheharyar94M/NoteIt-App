@@ -1,0 +1,110 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_layout_speech"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/theme_color"
+    tools:context="playaxis.appinn.note_it.main.fragment_home.bottom_bar_fragments.speech.SpeechFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/listening_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/note_image_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+                app:spanCount="3"
+                tools:itemCount="1"
+                tools:listitem="@layout/note_image_list_item_view" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/title_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_vertical"
+                android:hint="Title"
+                android:maxLength="15"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:paddingStart="20dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/hint_text_color"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textCursorDrawable="@drawable/cursor"
+                android:ellipsize="end"
+                android:textAppearance="?textAppearanceBody2" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/voice_note_list"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="8dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                tools:itemCount="5"
+                android:padding="5dp"
+                tools:listitem="@layout/voice_note_list_item"/>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/listening_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/listening"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:visibility="gone"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/mic_button"
+        app:layout_constraintEnd_toEndOf="@+id/mic_button"
+        app:layout_constraintStart_toStartOf="@+id/mic_button"
+        app:layout_constraintTop_toBottomOf="@+id/scrollview" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/mic_button"
+        android:layout_width="300dp"
+        android:layout_height="90dp"
+        android:elevation="15dp"
+        android:scaleType="centerCrop"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:lottie_loop="true"
+        android:padding="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/keyboard_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listening_text"
+        app:lottie_rawRes="@raw/mic_btn" />
+
+    <include
+        android:id="@+id/keyboard_view"
+        layout="@layout/keyboard_view"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

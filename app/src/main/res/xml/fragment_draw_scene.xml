@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/end"
+        motion:duration="100">
+
+        <OnSwipe
+            motion:touchAnchorId="@id/drawing_board"
+            motion:dragDirection="dragUp"
+            motion:touchAnchorSide="top"/>
+    </Transition>
+
+    <ConstraintSet
+        android:id="@+id/start">
+
+        <!-- Define the start state (visible) -->
+        <Constraint
+            android:layout_height="?actionBarSize"
+            android:layout_width="match_parent"
+            android:id="@+id/toolbar_layout"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"/>
+
+        <Constraint
+            android:id="@+id/drawing_board"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Constraint
+            android:id="@+id/drawing_utility_view_layout_include"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            motion:visibilityMode="ignore"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"/>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <!-- Define the mid state (invisible) -->
+        <Constraint
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:id="@+id/toolbar_layout"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"/>
+
+        <Constraint
+            android:id="@+id/drawing_board"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Constraint
+            android:id="@+id/drawing_utility_view_layout_include"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            motion:visibilityMode="ignore"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"/>
+    </ConstraintSet>
+</MotionScene>

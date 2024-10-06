@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.quicknotepad.main.fragment_home.bottom_bar_fragments.note.scanned_note.CameraFragment">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/view_finder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/camera_gallery_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gallery_camera_button"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/transparent_ripple_background_round"
+        app:layout_constraintEnd_toStartOf="@+id/camera_button"
+        app:layout_constraintBottom_toBottomOf="@+id/camera_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/camera_button" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/camera_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/camera_button"
+        android:layout_marginBottom="40dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/transparent_ripple_background_round"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/camera_torch_button"
+        app:layout_constraintStart_toEndOf="@+id/camera_gallery_button" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/camera_torch_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/torch_off_icon"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/transparent_ripple_background_round"
+        app:layout_constraintStart_toEndOf="@+id/camera_button"
+        app:layout_constraintBottom_toBottomOf="@+id/camera_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/camera_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>
